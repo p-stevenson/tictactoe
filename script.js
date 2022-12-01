@@ -1,13 +1,15 @@
-const tictactoe = (() => {
-  const _gameBoard = {
-    board: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
+const gameBoard = (function () {
+  const _board = Array(9).fill('');
+
+  const resetBoard = () => {
+    for (let i = 0; i < _board.length; i++) {
+      _board[i] = '';
+    }
   };
 
-  const playerFactory = function(name) {
-    return {name};
+  return {
+    resetBoard
   };
-
-  return {playerFactory};
 })();
 
 console.log('stop');
