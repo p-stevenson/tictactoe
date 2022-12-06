@@ -12,8 +12,13 @@ const gameBoard = (function () {
     }
   };
 
+  const render = () => {
+    cell.forEach((cell) => {
+      cell.textContent = _board[cell.id];
+    });
+  }
   return {
-    resetBoard
+    resetBoard, render,
   };
 })();
 
