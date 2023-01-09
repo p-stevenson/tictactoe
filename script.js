@@ -6,34 +6,30 @@ const gameBoard = (function () {
   //const _board = Array(9).fill('');
   const _board = ["x", "x", "o", "o", "x", "o", "x", "o", "o"];
 
-  const resetBoard = () => {
-    for (let i = 0; i < _board.length; i++) {
-      _board[i] = '';
-    }
-  };
-
   const getCell = () => {
+    function logCellData(cell) {
+      return cell.id;
+    }
     cell.forEach(cell => {
-      cell.addEventListener('click', () => {
-        return console.log(cell.id, cell.textContent);
-      })
+      cell.addEventListener('click', logCellData, {once :true})
     });
-  }
+  };
 
   const render = () => {
     cell.forEach((cell) => {
       cell.textContent = _board[cell.id];
     });
-  }
+  };
+  const resetBoard = () => {
+    for (let i = 0; i < _board.length; i++) {
+      _board[i] = '';
+    }
+  };
   return {
-    resetBoard,
-    render,
     getCell,
+    render,
+    resetBoard,
   };
 })();
-
-
-
-
 
 console.log('stop');
