@@ -3,3 +3,9 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/codeStyles/codeStyleConfig.xml
+/jsLinters/eslint.xml
+/prettier.xml
+/codeStyles/Project.xml
+/inspectionProfiles/Project_Default.xml
+/vcs.xml
